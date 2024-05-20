@@ -17,10 +17,11 @@
     Vue.createApp({
         methods: {
             parent(){
-                alert('부모 이벤트 실행!')
+                alert('부모 이벤트 실행');
             },
-            child(){
-                alert('자식 이벤트 실행!')
+            child(event){
+                alert('자식 이벤트 실행');
+                // event.stopPropagation();
             }
         },
     }).mount('#app')

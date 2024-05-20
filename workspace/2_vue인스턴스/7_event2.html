@@ -18,33 +18,33 @@
 <script src="https://unpkg.com/vue"></script>
 <script>
     let app = Vue.createApp({
-        name : 'test',
+        name: 'test',
         data() {
-            return {
-                money : 0, balance : 0
-            }
+            return {money : 0, balance : 0}
         },
         methods: {
-            deposit(){
-                if(this.money < 0){
+            deposit() {
+                if(this.money < 0) {
                     alert('0보다 큰 값을 입금하세요!')
                 } else {
                     this.balance += this.money;
                     this.money = 0;
                 }
             },
-            withdraw(){
-                if(this.money < 0){
+            withdraw() {
+                if (this.money < 0) {
                     alert('0보다 큰 값을 출금하세요!')
-                } else if(this.money > this.balance){
+                } else if (this.money > this.balance) {
                     alert('잔액이 부족합니다!')
-                }
-                else{
+                } else {
                     this.balance -= this.money;
                     this.money = 0;
                 }
-            },
+            }
         },
     }).mount('#app')
 </script>
 </html>
+
+
+9분까지!

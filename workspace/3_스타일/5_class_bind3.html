@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>클래스 적용3</title>
+    <title>클래스 적용2</title>
     <style>
-        .btnColor{
+        .btnColor {
             background-color: ivory;
             color: plum;
         }
-        .btnLayout{
+        .btnLayout {
             width: 120px;
             height: 120px;
             text-align: center;
         }
-        .btnBorder{
+        .btnBorder {
             border: red dashed 4px;
         }
-        .staticStyle{
+        .staticStyle {
             font-size: 49px;
         }
     </style>
@@ -34,11 +34,11 @@
 <script>
     const app = Vue.createApp({
         name : 'test',
-        data() {
+        data (){
             return {
                 style : {btnColor : false, btnLayout : false, btnBorder : false}
             }
-        },
+        }
     }).mount('#app')
 </script>
 </html>

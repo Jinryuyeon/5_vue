@@ -7,28 +7,28 @@
 </head>
 <body>
     <div id="app">
-        <button :style="style" @mouseover="over" @mouseout="out">스타일테스트</button>
+        <butTon :style="style" @mouseover="over" @mouseout="out">스타일테스트</butTon>
     </div>
 </body>
 <script src="https://unpkg.com/vue"></script>
 <script>
-    const app = Vue.createApp({
+    const vm = Vue.createApp({
         name : 'test',
-        data() {
+        data(){
             return {
-                style : {backgroundColor:'aqua', color:'black'}
+                style : {backgroundColor:'aqua', color: 'black'}
             }
         },
         methods: {
             over(){
-                this.style.backgroundColor = 'purple'
-                app.style.color = 'pink'
-                app.style.border = '10px solid red'
+                this.style.backgroundColor = 'purple';
+                vm.style.color = 'pink';
+                vm.style.border = '10px solid red'; // 스타일 추가
             },
             out(){
-                this.style.backgroundColor = 'aqua'
-                app.style.color = 'black'
-                app.style.border = 'none'
+                this.style.backgroundColor = 'aqua';
+                vm.style.color = 'black';
+                vm.style.border = 'none'; // 스타일 제거
             }
         },
     }).mount('#app')
